@@ -4,13 +4,14 @@ version: '1.0'
 steps:
   buildimage:
     type: build
+    description: Codefresh test example
     image_name: pprommer/codefreshexample 
     working_directory: ./
     dockerfile: Dockerfile
     tag: latest
 
   unit_test:
-    image: pprommer/codefreshexample 
+    image: ${{buildimage}} 
     working-directory: ./ 
     commands:
       - npm run test 
