@@ -2,8 +2,8 @@
 version: '1.0'
 
 steps:
-  test-all-the-code:
-    image-name: node:5
+  unit_test:
+    image-name: pprommer/codefreshexample 
     working-directory: ${{initial-clone}}
     commands:
       - npm run test 
