@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
 RUN npm install --silent
+RUN npm install --save-dev jest
 COPY . /usr/src/app
 EXPOSE 3000
 
