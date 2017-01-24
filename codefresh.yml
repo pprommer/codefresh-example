@@ -2,14 +2,8 @@
 version: '1.0'
 
 steps:
-  unit-test-step:
-    image: go:onbuild
+  test-all-the-code:
+    image-name: node:5
+    working-directory: ${{initial-clone}}
     commands:
-      - go test
-
-  build-example:
-    type: build
-    description: yaml example
-    image-name: codefresh-io/image
-    dockerfile: Dockerfile
-    tag: latest
+      - npm run test 

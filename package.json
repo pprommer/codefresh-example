@@ -1,0 +1,12 @@
+{
+  "name": "codefresh-example",
+  "version": "0.0.1",
+  "description": "Simple Jest Test",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "~18.1.0"
+  }
+}
