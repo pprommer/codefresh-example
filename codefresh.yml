@@ -4,7 +4,7 @@ version: '1.0'
 steps:
   buildimage:
     type: build
-    image: pprommer/codefreshexample 
+    image_name: pprommer/codefreshexample 
     working_directory: ./
     dockerfile: Dockerfile
 
