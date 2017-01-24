@@ -2,6 +2,11 @@
 version: '1.0'
 
 steps:
+  buildi_prj:
+    type: build
+    image: pprommer/codefreshexample 
+    dockerfile: Dockerfile
+
   unit_test:
     image-name: pprommer/codefreshexample 
     working-directory: ${{initial-clone}}
