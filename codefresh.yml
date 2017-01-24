@@ -9,7 +9,7 @@ steps:
     dockerfile: Dockerfile
 
   unit_test:
-    image-name: pprommer/codefreshexample 
+    image: pprommer/codefreshexample 
     working-directory: ./ 
     commands:
       - npm run test 
