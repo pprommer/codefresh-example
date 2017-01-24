@@ -2,13 +2,14 @@
 version: '1.0'
 
 steps:
-  buildi_prj:
+  buildimage:
     type: build
     image: pprommer/codefreshexample 
+    working_directory: ./
     dockerfile: Dockerfile
 
   unit_test:
     image-name: pprommer/codefreshexample 
-    working-directory: ${{initial-clone}}
+    working-directory: ./ 
     commands:
       - npm run test 
