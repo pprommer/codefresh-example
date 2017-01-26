@@ -14,5 +14,5 @@ steps:
     image: ${{buildimage}} 
     working-directory: ${{main_clone}} 
     commands:
-      - npm install
+      - npm install --silent
       - npm run test 
