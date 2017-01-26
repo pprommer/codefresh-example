@@ -6,12 +6,13 @@ steps:
     type: build
     description: Codefresh test example
     image_name: pprommer/codefreshexample 
-    working_directory: ./
+    working_directory: ${{main_clone}} 
     dockerfile: Dockerfile
     tag: latest
 
   unit_test:
     image: ${{buildimage}} 
-    working-directory: ./ 
+    working-directory: ${{main_clone}} 
     commands:
+      - npm install
       - npm run test 
